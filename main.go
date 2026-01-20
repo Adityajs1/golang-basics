@@ -11,6 +11,7 @@ func main(){
 	// conditional()
 	// ifState()
 	// function()
-	value()
-	ignore()
+	// value()
+	// ignore()
+	structs()
 }
