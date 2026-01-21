@@ -16,5 +16,6 @@ func main(){
 	// structs()
 	//nestedStructs()
 	//embeddedStructs()
-	methodsOne()
+	//methodsOne()
+	interfac()
 }
