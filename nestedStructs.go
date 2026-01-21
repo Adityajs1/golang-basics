@@ -4,26 +4,38 @@ import (
 	"fmt"
 )
 
-type messageToSend struct {
-	message   string
-	sender    user
-	recipient user
-}
-
 type user struct {
 	name   string
 	number int
 }
 
+type messageToSend struct {
+	sender    user
+	recipient user
+	message   string
+}
+
+
 func canSendMessage(mToSend messageToSend) bool {
-	// ?
+	if mToSend.sender.name == ""{
+		return false
+	}
+	if mToSend.recipient.name == ""{
+		return false
+	}
+	if mToSend.sender.number == 0{
+		return false
+	}
+	if mToSend.recipient.number == 0 {
+		return false
+	}
 	return true
 }
 
 // don't touch below this line
-
 func test(mToSend messageToSend) {
-	fmt.Printf(`sending "%s" from %s (%v) to %s (%v)...`,
+	fmt.Printf(
+		"sending \"%s\" from %s (%v) to %s (%v)...",
 		mToSend.message,
 		mToSend.sender.name,
 		mToSend.sender.number,
@@ -31,15 +43,18 @@ func test(mToSend messageToSend) {
 		mToSend.recipient.number,
 	)
 	fmt.Println()
+
 	if canSendMessage(mToSend) {
 		fmt.Println("...sent!")
 	} else {
 		fmt.Println("...can't send message")
 	}
+
 	fmt.Println("====================================")
 }
 
-func main() {
+
+func nestedStructs() {
 	test(messageToSend{
 		message: "you have an appointment tommorow",
 		sender: user{

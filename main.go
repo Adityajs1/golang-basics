@@ -13,5 +13,8 @@ func main(){
 	// function()
 	// value()
 	// ignore()
-	structs()
+	// structs()
+	//nestedStructs()
+	//embeddedStructs()
+	methodsOne()
 }
