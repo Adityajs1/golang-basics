@@ -17,5 +17,9 @@ func main(){
 	//nestedStructs()
 	//embeddedStructs()
 	//methodsOne()
-	interfac()
+	//interfac()
+	//inter()
+	// errorso()
+	// errorsEx()
+	withDraw()
 }

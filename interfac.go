@@ -7,6 +7,16 @@ type Shape interface{
 	Area() int           // the method in the parameter should also have a return datatype
 }
 
+type Perimeter interface{
+	Perimeter() int
+}
+
+type Geometry interface{
+	Shape
+	Perimeter
+}
+
+
 type recta struct{
 	width int
 	length int
@@ -16,22 +26,26 @@ func (r recta) Area() int{
 	return r.width * r.length
 }
 
-type circle struct{
-	radius int
+func(r recta) Perimeter() int{
+	return 2 *(r.width + r.length)
 }
 
-func (c circle) Area() int{
-	return 3*c.radius*c.radius
-}
+// type circle struct{
+// 	radius int
+// }
 
-func PrintArea(s Shape) {
-	fmt.Println("Area of the appropriate shape is:", s.Area())
+// func (c circle) Area() int{
+// 	return 3*c.radius*c.radius
+// }
+
+func describeShape(g Geometry) {
+	fmt.Println("Area of the appropriate shape is:", g.Area())
+	fmt.Println("Perimeter of the appropriate shape is:", g.Perimeter())
 }
 
 func interfac(){
-	r := recta{5,4}
-	c:= circle{5}
+	r := recta{width: 5, length: 4}
+	// c:= circle{5}
 
-	PrintArea(r)
-	PrintArea(c)
+	describeShape(r)
 }
