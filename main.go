@@ -25,5 +25,6 @@ func main(){
 	// loopsone()
 	// omit()
 	//while()
-	fizzbuzz()
+	// fizzbuzz()
+	continuee()
 }
