@@ -21,5 +21,9 @@ func main(){
 	//inter()
 	// errorso()
 	// errorsEx()
-	withDraw()
+	// withDraw()
+	// loopsone()
+	// omit()
+	//while()
+	fizzbuzz()
 }
