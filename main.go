@@ -26,5 +26,8 @@ func main(){
 	// omit()
 	//while()
 	// fizzbuzz()
-	continuee()
+	// continuee()
+	// sliced()
+	// matrix()
+	maps()
 }
